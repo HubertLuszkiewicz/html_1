@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+    <title>Forms Review</title>
+  </head>
+  <body>
+		<section id="overlay">
+      <img src="https://content.codecademy.com/courses/web-101/unit-6/htmlcss1-img_burger-logo.svg" alt="Davie's Burgers Logo" id="logo">
+      <hr>
+			<h1>Let's create a burger!</h1>
+			<form>
+				<section class="text input">
+					<label for="ingredient1">Ingredient 1: </label>
+					<input type="text" id="ingredient1" name="ingredient1" placeholder="eg.lettuce"  minlength="1" maxlength="10"/>
+					<br/>
+
+					<label for="ingredient2">Ingredient 2: </label>
+					<input type="text" id="ingredient2" name="ingredient2" placeholder="eg.egg" minlength="1" required/>
+					<br/>
+
+					<label for="ingredient3">Ingredient 3: </label>
+					<input type="text" id="ingredient3" name="ingredient3" placeholder="eg.tomato" pattern="[a-zA-Z]{5}"/>
+					
+				</section><br/>
+				
+				<section class="radio buttons">
+					<label for="spicy">Choose spiciness</label><br/>
+					<!-- First set of buttons -->
+					<input type="radio" id="spicy" name="spiciness" value="spicy"/>
+					<label for="spicy">Spicy</label>
+					
+					<input type="radio" id="medium" name="spiciness" value="medium"/>
+					<label for="medium">Medium</label>
+					
+					<input type="radio" id="mild" name="spiciness" value="midl"/>
+			    <label for="mild">Mild</label>
+					<br/><br/>
+
+					<!-- Second set of buttons -->
+					<label for="grain">Choose the type of roll</label><br/>
+					<input type="radio" id="grain" name="roll-type" value="grain"/>
+					<label for="grain">Grain</label>
+
+					<input type="radio" id="wheat" name="roll-type" value="wheat"/>
+					<label for="wheat">Wheat</label>
+					<br/><br/>	
+
+				</section>
+				
+				<section class="type number">
+					<label for="patty">How many patties would you like to have?</label><br/>
+					<input type="number" name="patty" id="patty" min="1" max="3"/>
+				</section><br/>
+
+				<section class="text area">
+					<label for="extra info">Enter extra info about your order here</label>
+					<br/>
+					<textarea rows="10" cols="50" name="extra info" id="extra info" placeholder="eg.I'd like the driver to come with 2 extra beers!"></textarea>
+				</section><br/>
+				
+				<section class="type range">
+					<label for="excitation">How excited are you in scale from 0 to a 100?</label><br/>
+					<span>0</span>
+					<input type="range" name="excitation" id="excitation" min="0" max="100" step="10"/>
+					<span>100</span>
+				</section><br/>
+
+				<section class="select">
+					<label for="recommendatory">How did you find out about our restaurant?</label>
+					<br/>
+					<select name="recommendatory" id="recommendatory">
+						<option value="Dawid">Dawid</option>
+						<option value="Michal">Michal</option>
+						<option value="Krystian">Krystian</option>
+						<option value="Pawel">Pawel</option>
+						<option value="Jarosz">Jarosz</option>
+						<option value="someone else">someone else(enter this persons name below)</option>
+					</select>
+				</section><br/>
+
+				<section class="datalist">
+					<label for="place">Choose one of our points in Poland</label>
+					<br/>
+					<input list="places" id="place"/>
+					<datalist id="places">
+						<option value="Slupsk"></option>
+						<option value="Koszalin"></option>
+						<option value="Slawno"></option>
+						<option value="Gdansk"></option>
+						<option value="Sopot"></option>
+						<option value="Poznan"></option>
+						<option value="Warszawa"></option>
+						<option value="Bydgoszcz"></option>
+						<option value="Torun"></option>
+						<option value="Kolobrzeg"></option>
+						<option value="Olsztyn"></option>
+						<option value="Elk"></option>
+						<option value="Wroclaw"></option>
+						<option value="Lodz"></option>
+						<option value="Zakopane"></option>
+						<option value="Gliwice"></option>
+						<option value="Katowice"></option>
+						<option value="Krakow"></option>
+					</datalist>
+				</section><br/>
+
+				<section class="password">
+					<label for="password">Input your password so we can check it is you</label>
+					<br/>
+					<input type="password" name="password" id="password"/>
+				</section><br/>
+
+				<section class="submit">
+					<input type="submit" value="Make Order"/>
+				</section>
+			</form>
+		</section>
+
+		
+  </body>
+</html>
